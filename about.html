@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Indo-German Academy</title>
+    <meta name="description" content="Learn about Indo-German Academy, our Goethe-standard teaching methodology, native-level training, and end-to-end German university placement support." />
+
+    <!-- Tailwind CSS for Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom Tailwind Configuration for German Theme -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                red: '#dc2626',      // Crimson Red
+                reddark: '#991b1b',  // Dark Ruby Red
+                gold: '#f59e0b',     // Amber Gold
+                goldlight: '#fbbf24',// Light Yellow
+                slate: '#0f172a',    // Charcoal Black
+                slatehover: '#1e293b'
+              },
+              neutral: {
+                50: '#f8fafc',
+                100: '#f1f5f9',
+                800: '#1e293b',
+                900: '#0f172a',
+                950: '#020617',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Outfit', 'sans-serif'],
+            },
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      #mvp-modal {
+        transition: opacity 0.3s ease;
+      }
+      #mvp-modal-content {
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+    </style>
+  </head>
+  <body
+    class="font-sans text-neutral-800 bg-white min-h-screen overflow-x-hidden"
+  >
+    <!-- --- TOP BAR --- -->
+    <div
+      class="bg-brand-slate text-white text-sm py-2 px-4 md:px-8 flex flex-col md:flex-row justify-between items-center z-50 relative border-b border-neutral-800"
+    >
+      <div class="flex flex-wrap items-center justify-center space-x-4 mb-2 md:mb-0">
+        <div class="flex items-center space-x-3 text-base">
+          <a
+            href="https://www.facebook.com/profile.php?id=100088901264690&mibextid=9R9pXO"
+            target="_blank"
+            class="hover:text-brand-gold transition-colors"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/indo_germanacademy_kochi/"
+            target="_blank"
+            class="hover:text-brand-gold transition-colors"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+        <span
+          class="hidden md:inline-block border-l border-neutral-700 h-4"
+        ></span>
+        <div
+          onclick="openModal('Email Us')"
+          class="flex items-center space-x-2 hover:text-brand-gold cursor-pointer transition-colors"
+        >
+          <i class="fas fa-envelope text-brand-red"></i>
+          <span>info@indogermanacademy.in</span>
+        </div>
+        <span
+          class="hidden md:inline-block border-l border-neutral-700 h-4"
+        ></span>
+        <div
+          onclick="openModal('Call Us')"
+          class="flex items-center space-x-2 hover:text-brand-gold cursor-pointer transition-colors"
+        >
+          <i class="fas fa-phone text-brand-gold"></i>
+          <span>+91 75919 16919</span>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3 mt-2 md:mt-0">
+        <button
+          onclick="openModal('Free Study Pathway Consultation')"
+          class="bg-brand-red hover:bg-brand-reddark text-white px-4 py-1.5 rounded-md font-bold flex items-center space-x-2 transition-colors text-xs"
+        >
+          <i class="fas fa-graduation-cap"></i>
+          <span>FREE STUDY PATHWAY</span>
+        </button>
+        <button
+          onclick="openModal('View Upcoming Batches')"
+          class="bg-brand-gold hover:bg-brand-gold/90 text-black px-4 py-1.5 rounded-md font-bold flex items-center space-x-2 transition-colors text-xs"
+        >
+          <i class="fas fa-calendar-alt"></i>
+          <span>A1 - B2 BATCHES</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- --- NAVIGATION --- -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center py-4"
+      >
+        <!-- LOGO AREA -->
+        <div class="flex items-center">
+          <a
+            href="index.html"
+            class="block cursor-pointer"
+          >
+            <div class="flex items-center h-full text-2xl font-black tracking-tight font-display">
+              <span class="text-brand-slate">Indo-German</span>
+              <span class="text-brand-red ml-1.5">Academy</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="hidden lg:flex space-x-8 font-bold text-neutral-700">
+          <a
+            href="index.html"
+            class="hover:text-brand-red transition-colors"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-brand-red border-b-2 border-brand-red pb-1"
+            >About</a
+          >
+          <a
+            href="courses.html"
+            class="hover:text-brand-red transition-colors"
+            >Courses</a
+          >
+          <a
+            href="gallery.html"
+            class="hover:text-brand-red transition-colors"
+            >Gallery</a
+          >
+          <a
+            href="blog.html"
+            class="hover:text-brand-red transition-colors"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="hover:text-brand-red transition-colors"
+            >Contact</a
+          >
+        </div>
+
+        <div class="hidden lg:flex space-x-4">
+          <a
+            href="contact.html#book"
+            class="border-2 border-brand-red text-brand-red hover:bg-neutral-50 px-5 py-2 rounded-lg font-bold transition-colors text-center"
+          >
+            APPLY NOW
+          </a>
+          <a
+            href="contact.html"
+            class="bg-brand-slate text-white hover:bg-brand-slatehover px-5 py-2 rounded-lg font-bold transition-colors shadow-lg text-center"
+          >
+            CONTACT US
+          </button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="lg:hidden">
+          <button
+            onclick="toggleMobileMenu()"
+            class="text-neutral-800 hover:text-brand-red focus:outline-none"
+          >
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-neutral-200 py-4 px-6 space-y-3 font-bold text-neutral-700">
+      <a href="index.html" class="block hover:text-brand-red transition-colors" onclick="toggleMobileMenu()">Home</a>
+      <a href="about.html" class="block text-brand-red" onclick="toggleMobileMenu()">About</a>
+      <a href="courses.html" class="block hover:text-brand-red transition-colors" onclick="toggleMobileMenu()">Courses</a>
+      <a href="gallery.html" class="block hover:text-brand-red transition-colors" onclick="toggleMobileMenu()">Gallery</a>
+      <a href="blog.html" class="block hover:text-brand-red transition-colors" onclick="toggleMobileMenu()">Blog</a>
+      <a href="contact.html" class="block hover:text-brand-red transition-colors" onclick="toggleMobileMenu()">Contact</a>
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="contact.html#book" class="border-2 border-brand-red text-brand-red hover:bg-neutral-50 px-5 py-2 rounded-lg font-bold transition-colors text-center block" onclick="toggleMobileMenu()">APPLY NOW</a>
+        <a href="contact.html" class="bg-brand-slate text-white hover:bg-brand-slatehover px-5 py-2 rounded-lg font-bold transition-colors shadow-lg w-full text-center block" onclick="toggleMobileMenu()">CONTACT US</a>
+      </div>
+    </div>
+
+    <!-- --- INNER HERO --- -->
+    <section class="relative bg-brand-slate py-20 text-white overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-slate via-brand-slate/90 to-transparent z-10"></div>
+      <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80" alt="About Us" class="absolute inset-0 w-full h-full object-cover opacity-35"/>
+      <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-20">
+        <h1 class="text-4xl md:text-5xl font-black font-display mb-4">About Indo-German Academy</h1>
+        <p class="text-neutral-300 text-lg max-w-xl font-light">Learn about our mission, immersive Goethe-standard teaching methodology, and direct pathways to Germany.</p>
+      </div>
+    </section>
+
+    <!-- --- ABOUT MAIN --- -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-3xl font-black text-black font-display mb-6">Our Mission & Approach</h2>
+            <p class="text-neutral-600 leading-relaxed mb-6">
+              Indo-German Academy committed to helping students reach their language goals in an effective and enjoyable manner. Operating out of Malappuram and Ernakulam, Kerala, we provide a complete pipeline for students wishing to pursue higher education or career placements in Germany.
+            </p>
+            <p class="text-neutral-600 leading-relaxed mb-6">
+              We specialize in teaching German at all competence levels, from beginner (A1) to advanced intermediate (B2). Our course structures prioritize conversational immersion, vocabulary retention, and Goethe-Institut syllabus alignment.
+            </p>
+            <p class="text-neutral-600 leading-relaxed">
+              Beyond the language classroom, we manage candidate visa files, university placement directories, block account setup, accommodation search, and pre-departure cultural orientation.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="bg-neutral-50 p-6 rounded-2xl border border-neutral-150">
+              <div class="w-12 h-12 bg-red-100 text-brand-red rounded-xl flex items-center justify-center text-xl mb-4"><i class="fas fa-users-cog"></i></div>
+              <h4 class="font-bold text-black mb-2 font-display">Immersive Learning</h4>
+              <p class="text-neutral-500 text-sm">Pronunciation drills, roleplay dialogues, and vocabulary integrations.</p>
+            </div>
+            <div class="bg-neutral-50 p-6 rounded-2xl border border-neutral-150">
+              <div class="w-12 h-12 bg-amber-100 text-brand-golddark rounded-xl flex items-center justify-center text-xl mb-4"><i class="fas fa-user-tie"></i></div>
+              <h4 class="font-bold text-black mb-2 font-display">Certified Trainers</h4>
+              <p class="text-neutral-500 text-sm">German experts with native fluency and exam certification guidelines.</p>
+            </div>
+            <div class="bg-neutral-50 p-6 rounded-2xl border border-neutral-150">
+              <div class="w-12 h-12 bg-red-100 text-brand-red rounded-xl flex items-center justify-center text-xl mb-4"><i class="fas fa-file-contract"></i></div>
+              <h4 class="font-bold text-black mb-2 font-display">Exam Confidence</h4>
+              <p class="text-neutral-500 text-sm">Mock tests modeled after Goethe and TELC testing standards.</p>
+            </div>
+            <div class="bg-neutral-50 p-6 rounded-2xl border border-neutral-150">
+              <div class="w-12 h-12 bg-amber-100 text-brand-golddark rounded-xl flex items-center justify-center text-xl mb-4"><i class="fas fa-passport"></i></div>
+              <h4 class="font-bold text-black mb-2 font-display">Visa & Account Assistance</h4>
+              <p class="text-neutral-500 text-sm">Step-by-step guidance through blocked accounts, visas, and university approvals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --- METHODOLOGY SECTION --- -->
+    <section class="py-16 bg-neutral-50 border-t border-b border-neutral-200">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-black text-black font-display mb-6">Our Course Levels</h2>
+        <p class="text-neutral-600 mb-12 max-w-2xl mx-auto">We follow the Common European Framework of Reference for Languages (CEFR) standard for language levels.</p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-xl border border-neutral-200">
+            <span class="text-2xl font-black text-brand-red font-display block mb-2">A1</span>
+            <h4 class="font-bold text-black mb-2 text-sm">Beginner</h4>
+            <p class="text-neutral-500 text-xs">Learn basic expressions, vocabulary, and introductory greetings.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-neutral-200">
+            <span class="text-2xl font-black text-brand-gold font-display block mb-2">A2</span>
+            <h4 class="font-bold text-black mb-2 text-sm">Elementary</h4>
+            <p class="text-neutral-500 text-xs">Communicate in simple, routine tasks and express daily routines.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-neutral-200">
+            <span class="text-2xl font-black text-brand-red font-display block mb-2">B1</span>
+            <h4 class="font-bold text-black mb-2 text-sm">Intermediate</h4>
+            <p class="text-neutral-500 text-xs">Describe dreams, goals, reasons, and speak in connected text paragraphs.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-neutral-200">
+            <span class="text-2xl font-black text-brand-gold font-display block mb-2">B2</span>
+            <h4 class="font-bold text-black mb-2 text-sm">Upper Intermediate</h4>
+            <p class="text-neutral-500 text-xs">Understand complex texts, converse fluidly with native speakers, and handle career environments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --- FOOTER --- -->
+    <footer
+      class="bg-brand-slate text-white pt-20 pb-10 border-t-4 border-brand-red"
+    >
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          <!-- Brand Column -->
+          <div>
+            <div class="mb-6 h-12 flex items-center">
+              <div class="text-2xl font-black tracking-tight font-display">
+                <span class="text-white">Indo-German</span>
+                <span class="text-brand-red ml-1.5">Academy</span>
+              </div>
+            </div>
+            <p class="text-neutral-400 mb-6 leading-relaxed text-sm font-medium">
+              "Pride In Excellence." We are dedicated to providing world-class training in German language proficiency (Goethe Standards) and guiding students to successful pathways in Germany.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="https://www.facebook.com/profile.php?id=100088901264690&mibextid=9R9pXO"
+                target="_blank"
+                class="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-brand-red hover:text-white transition-colors"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/indo_germanacademy_kochi/"
+                target="_blank"
+                class="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-brand-red hover:text-white transition-colors"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4
+              class="text-xl font-bold mb-6 border-b border-neutral-700 pb-2 inline-block font-display"
+            >
+              Quick Links
+            </h4>
+            <ul class="space-y-3 text-neutral-400 text-sm font-medium">
+              <li>
+                <a
+                  href="about.html"
+                  class="hover:text-brand-gold transition-colors flex items-center"
+                  ><i
+                    class="fas fa-arrow-right text-xs mr-2 text-brand-red"
+                  ></i>
+                  About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="courses.html"
+                  class="hover:text-brand-gold transition-colors flex items-center"
+                  ><i
+                    class="fas fa-arrow-right text-xs mr-2 text-brand-red"
+                  ></i>
+                  Our Courses</a
+                >
+              </li>
+              <li>
+                <a
+                  href="gallery.html"
+                  class="hover:text-brand-gold transition-colors flex items-center"
+                  ><i
+                    class="fas fa-arrow-right text-xs mr-2 text-brand-red"
+                  ></i>
+                  Gallery Showcase</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blog.html"
+                  class="hover:text-brand-gold transition-colors flex items-center"
+                  ><i
+                    class="fas fa-arrow-right text-xs mr-2 text-brand-red"
+                  ></i>
+                  Germany Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular Courses -->
+          <div>
+            <h4
+              class="text-xl font-bold mb-6 border-b border-neutral-700 pb-2 inline-block font-display"
+            >
+              Popular Pathways
+            </h4>
+            <ul class="space-y-3 text-neutral-400 text-sm font-medium">
+              <li>
+                <span class="hover:text-brand-gold transition-colors flex items-center cursor-pointer" onclick="openModal('Course Details: Paramedical & Nursing')"
+                  ><i
+                    class="fas fa-arrow-right text-xs mr-2 text-brand-gold"
+                  ></i>
+                  Paramedical & Nursing</span
+                >
+              </li>
+              <li>
+                <span class="hover:text-brand-gold transition-colors flex items-center cursor-pointer" onclick="openModal('Course Details: Engineering & IT')"
+                  ><i
+                    class="fas fa-arrow-right text-xs mr-2 text-brand-gold"
+                  ></i>
+                  Engineering & IT</span
+                >
+              </li>
+              <li>
+                <span class="hover:text-brand-gold transition-colors flex items-center cursor-pointer" onclick="openModal('Course Details: Hotel Management')"
+                  ><i
+                    class="fas fa-arrow-right text-xs mr-2 text-brand-gold"
+                  ></i>
+                  Hotel Management</span
+                >
+              </li>
+              <li>
+                <span class="hover:text-brand-gold transition-colors flex items-center cursor-pointer" onclick="openModal('Course Details: Hospitality Management')"
+                  ><i
+                    class="fas fa-arrow-right text-xs mr-2 text-brand-gold"
+                  ></i>
+                  Hospitality Management</span
+                >
+              </li>
+              <li>
+                <span class="hover:text-brand-gold transition-colors flex items-center cursor-pointer" onclick="openModal('Course Details: Logistics')"
+                  ><i
+                    class="fas fa-arrow-right text-xs mr-2 text-brand-gold"
+                  ></i>
+                  Logistics & Supply Chain</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4
+              class="text-xl font-bold mb-6 border-b border-neutral-700 pb-2 inline-block font-display"
+            >
+              Our Offices
+            </h4>
+            <ul class="space-y-4 text-neutral-400 text-xs font-medium">
+              <li class="flex items-start">
+                <i
+                  class="fas fa-map-marker-alt text-brand-red mr-3 mt-1 flex-shrink-0 text-base"
+                ></i>
+                <span
+                  ><strong>Head Office:</strong> Savera Tower, Changaramkulam, Malappuram, Kerala, 679574</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i
+                  class="fas fa-map-marker-alt text-brand-gold mr-3 mt-1 flex-shrink-0 text-base"
+                ></i>
+                <span
+                  ><strong>Corporate Office:</strong> Chemmanam Square, PP Road, Perumbavoor, Ernakulam, Kerala</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i
+                  class="fas fa-phone text-brand-red mr-3 flex-shrink-0 text-base"
+                ></i>
+                <span>+91 75919 16919, 77365 48240</span>
+              </li>
+              <li class="flex items-center">
+                <i
+                  class="fas fa-envelope text-brand-red mr-3 flex-shrink-0 text-base"
+                ></i>
+                <span>info@indogermanacademy.in</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center text-neutral-500 text-sm font-medium"
+        >
+          <p>&copy; 2026 Indo-German Academy. All rights reserved.</p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <p>Powered By ❤ NVN</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- --- FLOATING CHATBOT WIDGET --- -->
+    <div id="chatbot-widget" class="fixed bottom-6 right-6 z-[99] flex flex-col items-end">
+      <!-- Chat Window -->
+      <div id="chat-window" class="hidden w-80 sm:w-96 bg-white rounded-2xl shadow-2xl overflow-hidden border border-neutral-200 mb-4 transition-all duration-300 flex flex-col h-[450px]">
+        <!-- Header -->
+        <div class="bg-brand-slate text-white p-4 flex items-center justify-between border-b border-neutral-800">
+          <div class="flex items-center space-x-3">
+            <div class="relative">
+              <div class="w-10 h-10 bg-brand-red rounded-full flex items-center justify-center text-white font-bold font-display">
+                IGA
+              </div>
+              <span class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></span>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm leading-none font-display">Academy Advisor</h4>
+              <span class="text-xs text-neutral-400">Online & Ready</span>
+            </div>
+          </div>
+          <button onclick="toggleChat()" class="text-neutral-400 hover:text-white text-xl leading-none">&times;</button>
+        </div>
+        <!-- Messages Area -->
+        <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 text-sm bg-slate-50">
+          <!-- Bot message -->
+          <div class="flex items-start space-x-2.5">
+            <div class="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
+              IG
+            </div>
+            <div class="bg-white p-3 rounded-2xl shadow-sm border border-neutral-100 max-w-[80%] text-neutral-700">
+              <p>Hallo! Welcome to Indo-German Academy. How can I help you take your next step to Germany today?</p>
+            </div>
+          </div>
+        </div>
+        <!-- Quick reply options chips -->
+        <div id="chat-chips" class="p-3 bg-white border-t border-neutral-100 flex flex-wrap gap-2">
+          <button onclick="handleChipClick('Study for Free')" class="bg-neutral-100 hover:bg-brand-red hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold text-neutral-700 transition-colors">Study in Germany For Free</button>
+          <button onclick="handleChipClick('Language Batches')" class="bg-neutral-100 hover:bg-brand-red hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold text-neutral-700 transition-colors">German Batches (A1-B2)</button>
+          <button onclick="handleChipClick('Placements')" class="bg-neutral-100 hover:bg-brand-red hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold text-neutral-700 transition-colors">Career Placements</button>
+          <button onclick="handleChipClick('WhatsApp')" class="bg-emerald-50 hover:bg-emerald-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold text-emerald-700 transition-colors"><i class="fab fa-whatsapp mr-1"></i>Chat on WhatsApp</button>
+        </div>
+      </div>
+      <!-- Toggle Button -->
+      <button onclick="toggleChat()" class="bg-brand-red hover:bg-brand-reddark text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl transition-transform transform hover:scale-105 active:scale-95 focus:outline-none">
+        <i id="chat-icon-open" class="fas fa-comments"></i>
+        <i id="chat-icon-close" class="fas fa-times hidden"></i>
+      </button>
+    </div>
+
+    <!-- --- MVP MODAL POPUP --- -->
+    <div
+      id="mvp-modal"
+      class="fixed inset-0 bg-neutral-950/80 z-[100] hidden flex items-center justify-center backdrop-blur-sm"
+    >
+      <div
+        class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 m-4 transform scale-95 border-t-8 border-brand-red"
+        id="mvp-modal-content"
+      >
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-2xl font-black text-black font-display" id="modal-title">
+            Action
+          </h3>
+          <button
+            onclick="closeModal()"
+            class="text-neutral-400 hover:text-red-500 text-3xl leading-none"
+          >
+            &times;
+          </button>
+        </div>
+
+        <div id="modal-body" class="text-neutral-600 mb-6 font-medium text-sm">
+          <!-- Dynamic Content Goes Here -->
+        </div>
+
+        <form id="mvp-form" onsubmit="submitMvpForm(event)">
+          <div class="space-y-3">
+            <input
+              type="text"
+              placeholder="Full Name"
+              class="w-full p-3 bg-neutral-50 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red focus:bg-white transition-all text-black font-medium text-sm"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="w-full p-3 bg-neutral-50 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red focus:bg-white transition-all text-black font-medium text-sm"
+              required
+            />
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              class="w-full p-3 bg-neutral-50 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red focus:bg-white transition-all text-black font-medium text-sm"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-brand-slate text-white hover:bg-brand-slatehover font-extrabold py-4 rounded-lg mt-6 shadow-lg transition-colors flex justify-center items-center text-sm"
+          >
+            Submit Request <i class="fas fa-paper-plane ml-2"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Javascript -->
+    <script>
+      // Toggle mobile menu dropdown
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      }
+
+      // --- MODAL MVP LOGIC ---
+      function openModal(actionName) {
+        if (window.event) window.event.preventDefault();
+
+        const titleEl = document.getElementById('modal-title');
+        const bodyEl = document.getElementById('modal-body');
+        const formEl = document.getElementById('mvp-form');
+        const modal = document.getElementById('mvp-modal');
+        const modalContent = document.getElementById('mvp-modal-content');
+
+        formEl.style.display = 'block';
+        formEl.reset();
+
+        titleEl.innerText = actionName;
+        bodyEl.innerHTML = `Please provide your details below to proceed with <b>${actionName}</b>. Our team will redirect you to WhatsApp.`;
+
+        modal.classList.remove('hidden');
+
+        setTimeout(() => {
+          modal.classList.remove('opacity-0');
+          modalContent.classList.remove('scale-95');
+          modalContent.classList.add('scale-100');
+        }, 10);
+      }
+
+      function closeModal() {
+        const modal = document.getElementById('mvp-modal');
+        const modalContent = document.getElementById('mvp-modal-content');
+
+        modalContent.classList.remove('scale-100');
+        modalContent.classList.add('scale-95');
+
+        setTimeout(() => {
+          modal.classList.add('hidden');
+        }, 300);
+      }
+
+      // Live WhatsApp messaging integration
+      function redirectToWhatsApp(name, phone, email, qualification, message) {
+        const whatsappNumber = "917591916919";
+        const text = `Hello Indo-German Academy, I would like to make an inquiry:\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Qualification:* ${qualification}\n*Message/Query:* ${message}`;
+        const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(text)}`;
+        window.open(url, '_blank');
+      }
+
+      function submitMvpForm(e) {
+        e.preventDefault();
+        const actionName = document.getElementById('modal-title').innerText;
+        const bodyEl = document.getElementById('modal-body');
+        const formEl = document.getElementById('mvp-form');
+
+        const inputs = formEl.querySelectorAll('input');
+        const name = inputs[0].value;
+        const email = inputs[1].value;
+        const phone = inputs[2].value;
+
+        redirectToWhatsApp(name, phone, email, "N/A - Quick Request", `Enquiry about: ${actionName}`);
+
+        formEl.style.display = 'none';
+        bodyEl.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-black mb-2">Redirecting to WhatsApp...</h4>
+                    <p class="text-neutral-600">Opening WhatsApp Web / Mobile to submit your query. Thank you!</p>
+                </div>
+            `;
+
+        setTimeout(closeModal, 3000);
+      }
+
+      document
+        .getElementById('mvp-modal')
+        .addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeModal();
+          }
+        });
+
+      // --- CHATBOT WIDGET LOGIC ---
+      function toggleChat() {
+        const windowEl = document.getElementById('chat-window');
+        const openIcon = document.getElementById('chat-icon-open');
+        const closeIcon = document.getElementById('chat-icon-close');
+        
+        windowEl.classList.toggle('hidden');
+        openIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      }
+
+      function addMessage(text, isBot) {
+        const messagesContainer = document.getElementById('chat-messages');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `flex items-start space-x-2.5 ${isBot ? '' : 'flex-row-reverse space-x-reverse'}`;
+        
+        const avatar = isBot 
+          ? `<div class="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">IG</div>`
+          : `<div class="w-8 h-8 bg-brand-slate rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">U</div>`;
+          
+        messageDiv.innerHTML = `
+          ${avatar}
+          <div class="${isBot ? 'bg-white text-neutral-700 border border-neutral-100' : 'bg-brand-slate text-white'} p-3 rounded-2xl shadow-sm max-w-[80%]">
+            <p>${text}</p>
+          </div>
+        `;
+        
+        messagesContainer.appendChild(messageDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      }
+
+      function handleChipClick(option) {
+        addMessage(getChipLabel(option), false);
+        
+        setTimeout(() => {
+          let response = '';
+          if (option === 'Study for Free') {
+            response = "Germany offers tuition-free education at public universities. If you have +2 with 60% marks and can clear the German language levels (up to B2), you can apply for zero tuition fees! Would you like to check block accounts and visa details?";
+          } else if (option === 'Language Batches') {
+            response = "We offer intensive interactive batches for German levels A1, A2, B1, and B2. Goethe-aligned syllabus with morning and evening schedules. Shall we schedule a call back to check upcoming batch dates?";
+          } else if (option === 'Placements') {
+            response = "We support placement into German hospitals (nurses), logistics firms, hotels, and engineering sectors. Once you complete your B1/B2 training, we handle the recruitment, interview preparation, and visa. Would you like to check placements?";
+          } else if (option === 'WhatsApp') {
+            response = "Opening WhatsApp to chat with our executive counselors directly. Just ask your query!";
+            window.open('https://api.whatsapp.com/send?phone=917591916919&text=Hello%20Indo-German%20Academy,%20I%20have%20a%20query...', '_blank');
+          }
+          addMessage(response, true);
+        }, 600);
+      }
+
+      function getChipLabel(option) {
+        switch (option) {
+          case 'Study for Free': return "How can I study in Germany for free?";
+          case 'Language Batches': return "Tell me about German language classes.";
+          case 'Placements': return "What are the job placement opportunities?";
+          case 'WhatsApp': return "I'd like to chat live on WhatsApp.";
+          default: return option;
+        }
+      }
+    </script>
+  </body>
+</html>
